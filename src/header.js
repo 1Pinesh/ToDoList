@@ -21,7 +21,13 @@ a.textContent = "About Us";
 const h = document.createElement("a");
 h.textContent = "help";
 
+subHeadingContainer.appendChild(a);
+subHeadingContainer.appendChild(h);
+
 // adding logo to logo contrainer
 logoContainer.appendChild(logo);
 
-document.body.appendChild(logoContainer);
+// headerContainer.appendChild(logoContainer);
+headerContainer.appendChild(subHeadingContainer);
+
+document.body.appendChild(headerContainer);
