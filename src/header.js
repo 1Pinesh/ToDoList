@@ -1,47 +1,46 @@
 class Header {
   constructor() {
     // HeaderContainer
-    const header = () => {
-      const headerContainer = document.createElement("div");
-      headerContainer.classList.add("headerCon");
+    this.headerContainer = document.createElement("div");
+    this.headerContainer.classList.add("headerCon");
 
-      // Logo Container
-      const logoContainer = document.createElement("div");
-      logoContainer.classList.add("logoContainer");
+    // Logo Container
+    this.logoContainer = document.createElement("div");
+    this.logoContainer.classList.add("logoContainer");
 
-      // Logo
-      const logo = document.createElement("h1");
-      logo.classList.add("logo");
-      logo.textContent = "To-Do-List";
+    // Logo
+    this.logo = document.createElement("h1");
+    this.logo.classList.add("logo");
+    this.logo.textContent = "To-Do-List";
 
-      // subHeading Container
-      const subHeadingContainer = document.createElement("div");
-      subHeadingContainer.classList.add(subHeadingCon);
-      // SubHeading
-      const a = document.createElement("a");
-      a.textContent = "About Us";
+    // SubHeading Container
+    this.subHeadingContainer = document.createElement("div");
+    this.subHeadingContainer.classList.add("subHeadingCon");
 
-      const h = document.createElement("a");
-      h.textContent = "help";
+    // SubHeading Links
+    const a = document.createElement("a");
+    a.textContent = "About Us";
 
-      subHeadingContainer.appendChild(a);
-      subHeadingContainer.appendChild(h);
+    const h = document.createElement("a");
+    h.textContent = "Help";
 
-      // adding logo to logo contrainer
-      logoContainer.appendChild(logo);
+    this.subHeadingContainer.appendChild(a);
+    this.subHeadingContainer.appendChild(h);
 
-      headerContainer.appendChild(logoContainer);
-      headerContainer.appendChild(subHeadingContainer);
+    // Adding logo to logo container
+    this.logoContainer.appendChild(this.logo);
 
-      return headerContainer;
-    };
+    this.headerContainer.appendChild(this.logoContainer);
+    this.headerContainer.appendChild(this.subHeadingContainer);
   }
+
   getHeaderElement() {
     return this.headerContainer;
   }
 }
 
-// create the header obj
+// Create the header object
 const headerObj = new Header();
 
-document.body.appendChild(header());
+// Append the header to the document body
+document.body.appendChild(headerObj.getHeaderElement());
