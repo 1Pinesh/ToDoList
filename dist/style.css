@@ -36,3 +36,12 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* MainMenu */
+.mainMenuCon {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Project */

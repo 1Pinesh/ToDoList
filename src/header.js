@@ -43,4 +43,4 @@ class Header {
 const headerObj = new Header();
 
 // Append the header to the document body
-document.body.appendChild(headerObj.getHeaderElement());
+document.body.prepend(headerObj.getHeaderElement());
