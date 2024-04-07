@@ -1,0 +1,23 @@
+/* Header CSS */
+body {
+  background-color: black;
+  color: white;
+}
+/*** Header Container*/
+.headerCon {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/*** Logo Container*/
+.logoContainer {
+  border: 1px solid salmon;
+  margin-left: 60px;
+}
+
+/*** subHeading Container*/
+.subHeadingCon {
+  border: 1px solid green;
+}
